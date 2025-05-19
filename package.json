@@ -4,7 +4,8 @@
   "description": "Display a quick view of data without leaving the current page",
   "main": "index.sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node compile.js"
   },
   "repository": {
     "type": "git",
