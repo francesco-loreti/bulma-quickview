@@ -1,2 +1,7 @@
-/bulma
-/node_modules
+.sass-cache/
+*.css.map
+node_modules
+bulma-quickview*.tgz
+npm-debug.log
+
+.jekyll-cache/

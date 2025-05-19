@@ -1,17 +1,16 @@
 @charset "utf-8"
 
 @use 'sass:list'
-@use "bulma/sass/utilities/initial-variables.scss" as iv
-@use "bulma/sass/utilities/derived-variables.scss" as dv
-@use "bulma/sass/utilities/mixins" as mixins
+@use "node_modules/bulma/sass/utilities/initial-variables.scss" as iv
+@use "node_modules/bulma/sass/utilities/derived-variables.scss" as dv
+@use "node_modules/bulma/sass/utilities/mixins.scss" as mixins
 
 $quickview-z: 35 !default
 $quickview-header-height: 3.25em !default
 $quickview-footer-height: 4rem !default
 $quickview-shadow: 5px 0px 13px 3px rgba( 0, 0, 0, 0.1 ) !default
-$quickview-divider: 1px solid iv.$grey-lighter !default
-$progress-colors: dv.$colors !default
-$primary-color: var(--bulma-primary)
+$quickview-divider: 1px solid rgb(219, 219, 219) !default
+$colors: dv.$colors !default
 $quickview-max-width: calc( 100% - 50px ) !default
 
 .quickview
@@ -96,9 +95,9 @@ $quickview-max-width: calc( 100% - 50px ) !default
     align-items: center
     padding: 0 1rem
     min-height: $quickview-header-height // !important
-    background-color: $primary-color
+    background-color: var(--bulma-primary)
     border-bottom: $quickview-divider
-    @each $name, $pair in $progress-colors
+    @each $name, $pair in $colors
       $color: list.nth($pair, 1)
       $color-invert: (#{list.nth($pair, 1)})-invert
       &.#{iv.$class-prefix}is-#{$name}
