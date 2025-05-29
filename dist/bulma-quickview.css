@@ -47,6 +47,9 @@
     right: -25%;
   }
 }
+.quickview.is-left {
+  direction: ltr;
+}
 @media screen and (max-width: 768px) {
   .quickview.is-left {
     left: -100%;
@@ -87,16 +90,26 @@
 }
 @media screen and (min-width: 1024px) {
   .quickview.is-active.is-small {
-    width: 35% !important;
+    width: 20% !important;
   }
 }
 @media screen and (max-width: 1023px) {
-  .quickview.is-active.is-medium, .quickview.is-active.is-half {
+  .quickview.is-active.is-medium {
     width: 100% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .quickview.is-active.is-medium, .quickview.is-active.is-half {
+  .quickview.is-active.is-medium {
+    width: 35% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .quickview.is-active.is-half {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quickview.is-active.is-half {
     width: 50% !important;
   }
 }
@@ -120,14 +133,8 @@
     width: 100% !important;
   }
 }
-.quickview.is-left {
-  direction: ltr;
-}
-.quickview.is-left .quickview-body {
-  direction: ltr;
-}
-.quickview.is-left .quickview-body .quickview-block {
-  direction: ltr;
+.quickview .quickview-body {
+  direction: ltr !important;
 }
 .quickview .quickview-header {
   display: flex;
@@ -213,7 +220,6 @@
   max-height: 2em;
 }
 .quickview .quickview-body {
-  direction: rtl;
   -webkit-box-flex: 1;
   flex: 1 1 0%;
   overflow-y: auto;
