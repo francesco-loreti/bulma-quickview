@@ -46,6 +46,7 @@ $quickview-max-width: calc( 100% - 50px ) !default
     width: 25%
     right: -25%
   &.is-left
+    direction: ltr
     @include mixins.mobile
       left: -100%
     @include mixins.tablet
@@ -87,12 +88,9 @@ $quickview-max-width: calc( 100% - 50px ) !default
         width: 100% !important
       @include mixins.desktop
         width: 100% !important
-  &.is-left
-    direction: ltr
-    .quickview-body
-      direction: ltr
-      .quickview-block
-        direction: ltr
+
+  .quickview-body
+    direction: ltr !important
 
   .quickview-header
     display: flex
@@ -117,7 +115,6 @@ $quickview-max-width: calc( 100% - 50px ) !default
         max-height: 2em
 
   .quickview-body
-    direction: rtl
     -webkit-box-flex: 1
     flex: 1 1 0%
     overflow-y: auto
