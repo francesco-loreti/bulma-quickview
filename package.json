@@ -27,6 +27,6 @@
   "homepage": "https://github.com/francesco-loreti/bulma-quickview#readme",
   "devDependencies": {
     "bulma": "^1.0.4",
-    "sass": "^1.89.0"
+    "sass": "^1.89.2"
   }
 }
